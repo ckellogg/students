@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Students Data</title>
+
+    <script src="lib/jquery-1.12.4.min.js"></script>
+    <script src="lib/bootstrap-3.3.6.min.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap-3.3.6.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.6.min.css.map">
+    <link rel="stylesheet" href="lib/style.css">
+</head>
+
+<body>
+    <!--Modal---------------------------------------------------------------------->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            Modal content
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Loading ...</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="padding-left:275px;">
+                        <!--<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> div class="progress">-->
+                        <div id='progressBar' class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                            <!--<span class="sr-only">70% Complete</span>-->
+                        </div>
+                </div>
+                </p>
+                <p>Please wait.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Edit Modal----------------------------------------------------------------->
+    <div id="editModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Student Information</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="studentForm" role="form" class="form">
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <label for="field-fname">First Name:</label><br>
+                                <input type="text" class="form-control sr" id="field-fname"><br>
+                                <label for="field-lname">Last Name:</label><br>
+                                <input type="text" class="form-control sr" id="field-lname"><br>
+                                <label for="field-startDate">Start Date:</label><br>
+                                <input type="text" class="form-control sr" id="field-startDate"><br>
+                                <label for="field-phone">Phone:</label><br>
+                                <input type="text" class="form-control" id="field-phone"><br>
+                                <label for="field-street">Steet:</label><br>
+                                <input type="text" class="form-control sr" id="field-street"><br>
+                                <label for="field-city">City:</label><br>
+                                <input type="text" class="form-control" id="field-city"><br>
+                                <label for="field-state">State:</label><br>
+                                <input type="text" class="form-control" id="field-state"><br>
+                                <label for="field-zip">Zip:</label><br>
+                                <input type="text" class="form-control" id="field-zip"><br>
+                                <label for="field-year">Year:</label><br>
+                                <select class="form-control" id="field-year">
+                                    <option value=1>Freshman</option>
+                                    <option value=2>Sophomore</option>
+                                    <option value=3>Junior</option>
+                                    <option value=4>Senior</option>
+                                </select>
+                                <label for="field-id"></label>
+                                <input type="hidden" class="form-control" id="field-id">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button id="submitButton" type="button" class="btn-primary" onclick="" data-dismiss="modal">Submit</button>
+                            <button type="button" class="btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END edit modal-->
+    <!-- Container----------------------------------------------------------------->
+    <div class="container-fluid text-left">
+        <div class="PageTitle">
+            <h1>Students</h1>
+        </div>
+        <!-- Buttons--------------------------------------------------------------->
+        <div class="Buttons">
+            <button type="button" class="btn-lg btn-primary" id="buttonAdd" data-toggle="tooltip" data-placement="top" title="Add Student" onclick="createStudent()"><span class="glyphicon glyphicon-plus"></span></button>
+            <button type="button" class="btn-lg btn-primary" id="buttonRestore" data-toggle="tooltip" data-placement="top" title="Restore latest student you deleted" onclick="restoreStudent()"><span class="glyphicon glyphicon-refresh"></span></button>
+
+            <button type="button" class="btn-lg btn-primary" id="buttonTable" data-toggle="tooltip" data-placement="top" title="Display as Table" onclick="renderTable()"><span class="glyphicon glyphicon-list-alt" ></span></button>
+            <button type="button" class="btn-lg btn-primary" id="buttonTile" data-toggle="tooltip" data-placement="top" title="Display as Tiles" onclick="renderTiles()"><span class="glyphicon glyphicon-th" ></span></button>
+        </div><br>
+        <!-- Student tiles view-------------------------------------------------------->
+        <div class="row switchTableTileView" id="studentTilesView"></div>
+        <!-- Student table view-------------------------------------------------------->
+        <table class="table table-striped switchTableTileView" id="studentTableView">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <!--Footer--------------------------------------------------------------------->
+        <footer class="container-fluid text-center">
+            <p>CS 3660</p>
+        </footer>
+    </div>
+    <!--End of Container-> 
+<!--Scripts-------------------------------------------------------------------->
+    <script src="students.js"></script>
+    <script src="sortComparators.js"></script>
+    <script src="lib/sugar-1.4.1.min.js"></script>
+</body>
+
+</html>
