@@ -1,0 +1,28 @@
+loading server
+loading server
+loading server
+loading server
+loading server
+loading server
+[0mGET / [36m304 [0m12.194 ms - -[0m
+[0mGET /lib/jquery-1.12.4.min.js [36m304 [0m2.591 ms - -[0m
+[0mGET /lib/bootstrap-3.3.6.min.css [36m304 [0m1.154 ms - -[0m
+[0mGET /lib/bootstrap-3.3.6.min.css.map [36m304 [0m1.133 ms - -[0m
+[0mGET /lib/style.css [36m304 [0m5.082 ms - -[0m
+[0mGET /lib/bootstrap-3.3.6.min.js [36m304 [0m0.869 ms - -[0m
+[0mGET /students.js [36m304 [0m0.750 ms - -[0m
+[0mGET /sortComparators.js [36m304 [0m0.489 ms - -[0m
+[0mGET /lib/sugar-1.4.1.min.js [36m304 [0m0.498 ms - -[0m
+[0mGET /lib/bootstrap.min.css.map [33m404 [0m23.511 ms - -[0m
+[0mGET /fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.646 ms - -[0m
+[0mGET /api/v1/students.json [32m200 [0m3.011 ms - 313[0m
+[0mGET /api/v1/students/0001.json [32m200 [0m2.496 ms - 161[0m
+[0mGET /api/v1/students/0003.json [32m200 [0m1.963 ms - 167[0m
+[0mGET /api/v1/students/0002.json [32m200 [0m0.726 ms - 162[0m
+[0mGET /api/v1/students/0004.json [32m200 [0m1.622 ms - 164[0m
+[0mGET /api/v1/students/0005.json [32m200 [0m2.340 ms - 158[0m
+[0mGET /api/v1/students/0006.json [32m200 [0m0.878 ms - 161[0m
+[0mGET /api/v1/students/0008.json [32m200 [0m0.816 ms - 161[0m
+[0mGET /api/v1/students/0007.json [32m200 [0m1.688 ms - 157[0m
+[0mGET /api/v1/students/0009.json [36m304 [0m1.367 ms - -[0m
+[0mGET /api/v1/students/0010.json [32m200 [0m1.176 ms - 162[0m
